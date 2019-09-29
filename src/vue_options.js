@@ -13,5 +13,5 @@ optionArr.forEach(el => {
   let {name} = optionObj
   vueOptions[name]=optionObj.init()
 })
-
+ 
 export default vueOptions
