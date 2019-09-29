@@ -1,0 +1,243 @@
+//引入变量声明
+@import './static.scss';
+
+html {
+  font-size: 12px;
+  font-family: '微软雅黑' !important;
+}
+
+body {
+  background-color: $bg-color;
+  margin: 0;
+  padding: 0;
+}
+
+.ml_30 {
+  margin-left: 30px !important;
+}
+
+.mt_30 {
+  margin-top: 30px !important;
+}
+
+.mr_30 {
+  margin-right: 30px !important;
+}
+
+.mb_30 {
+  margin-bottom: 30px !important;
+}
+
+.ml_140 {
+  margin-left: 140px;
+}
+
+.padding_40 {
+  padding: 0 40px;
+}
+
+// 分页
+#pagination {
+  text-align: right;
+}
+
+// 汇总金额
+.amount-box {
+  display: flex;
+  justify-content: flex-end;
+
+  .amount-value {
+    padding-top: 20px;
+    margin-right: 10px;
+    min-width: 170px;
+    height: 32px;
+    line-height: 32px;
+    font-weight: 400;
+    color: #606266;
+    font-size: 14px;
+    text-align: left;
+
+    span {
+      padding-left: 10px;
+      float: right;
+    }
+  }
+}
+
+//滚动条样式
+// 滚动条整体样式, 高宽分别对应横竖滚动条的尺寸
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset006pxrgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #c6c6c6;
+  -webkit-box-shadow: inset006pxrgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: #c6c6c6;
+}
+
+.el-table th.gutter,
+.el-table__fixed-right .el-table__fixed-right-patch {
+  box-shadow: -10px -1px $primary-color;
+}
+
+// 数字input 去掉加减按钮
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+
+// 表格文字提示
+.el-tooltip__popper {
+  max-width: 200px;
+}
+
+// 表单验证*
+.is-required {
+  .el-form-item__label {
+    padding: 0 10px 0 0;
+
+    &::before {
+      content: "";
+      margin: 0;
+      display: none !important;
+    }
+
+    &::after {
+      content: '*';
+      color: #F56C6C;
+      margin-left: 4px;
+    }
+  }
+}
+
+// 禁用隐藏红点
+.after-hidden {
+  .el-form-item__label {
+    &::after {
+      display: none !important;
+    }
+  }
+}
+
+// 禁用的样式
+.isLookClass {
+  .el-form-item__label {
+    color: #999;
+  }
+
+  .el-form-item {
+    .is-disabled {
+
+      input::-webkit-input-placeholder,
+      span:not(.el-radio__inner),
+      input,
+      textarea {
+        color: #5c5c5c;
+        border: 0 !important;
+        background-color: #f7f7f7 !important;
+      }
+
+      span,
+      textarea {
+        &:hover {
+          cursor: Default !important;
+        }
+      }
+
+      .el-input__suffix {
+        display: none;
+      }
+
+      input {
+        cursor: Default !important;
+      }
+    }
+    .textarea--nolimit {
+      textarea {
+        background-color: #fff !important;
+      }
+    }
+  }
+}
+
+input,
+span,
+div {
+  outline: none !important;
+}
+
+// 组件库需要去掉的样式
+.el-table--half {
+  height: 645px;
+}
+
+.el-main__search {
+  .select-warp {
+    div {
+      background-color: #fff !important;
+    }
+  }
+
+  background-color: #fff !important;
+}
+
+.seniorSearch-box {
+  margin-bottom: 0;
+}
+
+.el-main {
+  background-color: #f7f7f7;
+}
+
+.el-flex--end {
+  margin-top: 0;
+  height: 55px;
+}
+
+
+.el-toolbar__common {
+  padding: 0;
+  padding-left: 20px;
+}
+
+.el-toolbar {
+  height: 50px;
+  line-height: 50px;
+}
+
+.advanced-search {
+  .el-form-item--mini {
+    margin-bottom: 5px;
+  }
+
+  .el-form-item__label {
+    margin-bottom: 15px;
+  }
+}
+
+.el-main__whole {
+  max-width: 1920px;
+}
+
+.tableHeadClass {
+  height: 40px;
+}
+
+.padding_40 {
+  padding: 0 40px;
+}

@@ -1,0 +1,108 @@
+/**
+ * @author: 周靖松
+ * @information: 表格样式
+ * @Date: 2019-04-27 16:43:52
+ */
+
+// 表格loading
+@mixin loading {
+
+  .loading-area {
+    position: absolute;
+    top: 270px;
+    left: 48%;
+    z-index: 1000;
+
+    #table-loading {
+      transform: scale(1)
+    }
+
+    .loading-text {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #999;
+    }
+  }
+
+
+  .mask {
+    height: calc( 100% - 40px);
+    position: absolute;
+    top: 40px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 98;
+    background-color: rgba(255, 255, 255, .8);
+  }
+
+  .el-table__empty-block {
+    background-position: center 170px;
+    width: 100% !important;
+  }
+}
+
+//操作按钮slot盒子
+@mixin btnSlot {
+
+  //操作按钮slot盒子
+  .table-slot-box {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+//表格组件样式
+
+#baseTable {
+
+  // 单元格隐藏
+  .icon-box {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  // 图标布局
+  .icon-flex {
+    display: flex;
+    justify-content: start;
+  }
+  //  操作栏按钮插槽盒子
+  @include btnSlot;
+  // 表格loading
+  @include loading;
+  width: 100%;
+
+
+
+  // 图标
+  .iconShow {
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    margin-top: 2px;
+    float: right;
+  }
+
+  // 支出图标
+  .icon-spending {
+    @extend .iconShow;
+    background-size: 120%;
+    color: #eb4c44;
+  }
+
+  // 支出的文字
+  .table-span_hidden {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    min-width: 70px;
+  }
+}
+// 覆盖表格前边的杠
+.tableRowClass>td:nth-of-type(1) {
+    border-left: 2px solid #ffc339 !important;
+}
