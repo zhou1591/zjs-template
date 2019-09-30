@@ -4,7 +4,6 @@
  -->
 <template>
   <div :class="amountShow?'amount-box':''" id="pagination">
-    <div class="amount-value" v-if="amountShow">{{AmountItem}}合计 ：{{summaryAmount.toFixed(2)}} <span>元</span> </div>
     <el-pagination  background
                     prev-text="上一页"
                     next-text="下一页"

@@ -21,7 +21,7 @@ export const formPublicClass = {
     },
     /**
      * @Author: 周靖松
-     * @information: 侧滑赋值操作
+     * @information: 赋值操作
      * @Date: 2019-09-09 16:45:11
      */
     drawerSaveInit(orgin, target, notEnumerable) {
