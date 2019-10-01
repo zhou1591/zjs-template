@@ -15,8 +15,8 @@ export default class InitStore{
         this.model={
             modules:{}
         }
-        // 扫描store文件夹，约定放vuex的文件夹名称是store
-        this.storeContext = require.context('@/store',true,/\.js$/)
+        // 扫描store文件夹，约定放vuex的文件夹名称是vuex
+        this.storeContext = require.context('@/vuex',true,/\.js$/)
     }
     /**
      * @Author: 周靖松

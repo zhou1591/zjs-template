@@ -3,22 +3,25 @@
  * @information: 最后更新时间
  -->
 <template>
-    <layout></layout>
+    <layout :layoutConfig="layoutConfig"></layout>
 </template>
 
 <script>
-export default {
-    data() {
-       return {
-    
-       }
-    },
-    methods: {
 
-    }
-}
+export default {
+  data() {
+    return {
+      layoutConfig: {
+        head: true,
+        aside: true,
+        main: true,
+        foot: true
+      }
+    };
+  },
+  methods: {}
+};
 </script>
 
 <style lang='scss'>
-
 </style>

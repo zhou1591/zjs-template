@@ -16,7 +16,7 @@ let path = {
   production: ` `
 }
 let token = {
-  development: `H+SCv5OpO1IpKtKgCn+ILFJip75Yvt7hVM/xfBx0i4gJSc7/w4YZfSuQ53KldM1WHqsMSMgmKU567UUeyNJHAd6g14ejQCaKI9LKc8a0oJ0Y+s/BxmCONO1P0aHEsT0dpcyF+OG5llwBhQza3t9gZeF3yebn1aXN41GYru54tqQfWjzpdcsZAwkV4O8+8iECURjoBCH+/AJyLVokt55oK3ivK10jruxGT9FFOeKePBqBLbuanX61nErUhwbb7WxyC9kbnjFWc2JQUl2y+vHiC3GyDJT8f4HLzMSiDGN42xYgURKrCVjRaN0oOH5tjbmV2S3VPUjhIbkrhlM07v0BLw==`,
+  development: ` `,
   lan: window.token || "",
   pred: window.token || "",
   production: window.token || ""
@@ -31,7 +31,7 @@ export default class InitAxios {
     //   成功响应状态码
     this.successCode = [1000, 200]
     //  推出登陆状态码
-    this.logoutCode = [435011]
+    this.logoutCode = [ ]
     //  允许的对象类型
     this.successProp = [ArrayBuffer]
   }

@@ -7,12 +7,15 @@ import App from './App'
 import vueInit from "@/vue_init.js"
 import vueOptions from '@/vue_options.js'
 import elementUI from 'element-ui'
+import zjsMethods from 'zjsmethods'
 // 引入样式
 import './style/index.scss';
 import commonUtil from "@/assets/js/common_util.js"
 
 Vue.use(elementUI)
 Vue.use(vueInit)
+// 引入方法包
+Vue.use(zjsMethods)
 
 
 Vue.prototype.$commonUtil = commonUtil
