@@ -93,7 +93,7 @@ module.exports = new Promise((resolve, reject) => {
       // Add FriendlyErrorsPlugin
       devWebpackConfig.plugins.push(new FriendlyErrorsPlugin({
         compilationSuccessInfo: {
-          messages: [`本地地址: http://localhost:${port},已经为你打开了`],
+          messages: [`本地地址: http://localhost:${port},已经为你打开了 o(*￣▽￣*)ブ `],
         },
         onErrors: config.dev.notifyOnErrors ?
           utils.createNotifierCallback() : undefined
