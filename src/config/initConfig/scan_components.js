@@ -5,6 +5,8 @@
 // 引入markdown样式,等同于放到main.js  不需要的自行注释
 import 'highlight.js/styles/github.css';
 import 'github-markdown-css';
+// 引入混入配置 
+import initMixins from './init_mixins';
 /**
  * @Author: 周靖松
  * @information: 组件扫描类
@@ -39,5 +41,13 @@ export default class ScanComponents {
 				vue.component(componentName, subEl.default);
 			});
 		});
+	}
+	/**
+	 * @Author: 周靖松
+	 * @information: 注册混入
+	 * @Date: 2019-10-02 10:55:29
+	 */	
+	getMixin(){
+		return new initMixins().init()
 	}
 }

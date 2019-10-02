@@ -2,7 +2,7 @@
  * @Date: 2019-08-09 15:06:16
  * @information: 最新更改时间
  */
-export const publicCalss = {
+export default {
   data() {
     return {
       // 查询模型
@@ -103,7 +103,7 @@ export const publicCalss = {
       });
       // 提示消息
       let endMessage = openMessage ? openMessage : message
-      endMessage && this.$commonUtil.setMessage('success', endMessage, true)
+      endMessage && this.setMessage('success', endMessage, true)
     },
     /**
      * @author: 周靖松
@@ -192,11 +192,29 @@ export const publicCalss = {
       // load
       this.excelLoading = true
       this.exportExcel(this.searchModel.query).then(res => {
-          this.$commonUtil.downExcel(res, excelName)
+          this.downExcel(res, excelName)
           // load
           this.excelLoading = false
         })
         .catch(_ => this.excelLoading = false)
+    },
+    /**
+     * @author: 周靖松
+     * @information: 导出excel
+     * @Date: 2019-04-07 16:33:44
+     */
+    downFile(res, name) {
+      const blob = new Blob([res]);
+      const elink = document.createElement('a');
+      elink.download = `${name}.xls`;
+      elink.style.display = 'none';
+      elink.href = URL.createObjectURL(blob);
+      document.body.appendChild(elink);
+      elink.click();
+      // 释放URL 对象
+      URL.revokeObjectURL(elink.href);
+      // 移除dom
+      document.body.removeChild(elink);
     },
   },
   /**
@@ -206,6 +224,6 @@ export const publicCalss = {
    */
   mounted() {
     this.getTableHead();
-    this.noQueryTable&&this.resetPostTableBody();
+    this.noQueryTable && this.resetPostTableBody();
   }
 }

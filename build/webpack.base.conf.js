@@ -73,7 +73,15 @@ module.exports = {
       },
       {
         test: /.md$/,
-        loader: ['vue-loader',"vue-markdown-loader/lib/markdown-compiler"]
+        use:[
+          'vue-loader',
+          {
+            loader:'vue-markdown-loader/lib/markdown-compiler',
+            options:{
+              raw: true
+            }
+          }
+        ]
       }
     ]
   },

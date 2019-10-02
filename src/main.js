@@ -10,7 +10,6 @@ import elementUI from 'element-ui'
 import zjsMethods from 'zjsmethods'
 // 引入样式
 import './style/index.scss';
-import commonUtil from "@/assets/js/common_util.js"
 
 Vue.use(elementUI)
 Vue.use(vueInit)
@@ -18,7 +17,6 @@ Vue.use(vueInit)
 Vue.use(zjsMethods)
 
 
-Vue.prototype.$commonUtil = commonUtil
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

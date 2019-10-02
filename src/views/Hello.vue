@@ -3,7 +3,9 @@
  * @information: 最后更新时间
  -->
 <template>
-    <layout :layoutConfig="layoutConfig"></layout>
+    <layout >
+      <!-- <div slot="aside"></div> -->
+    </layout>
 </template>
 
 <script>
@@ -11,12 +13,7 @@
 export default {
   data() {
     return {
-      layoutConfig: {
-        head: true,
-        aside: true,
-        main: true,
-        foot: true
-      }
+
     };
   },
   methods: {}

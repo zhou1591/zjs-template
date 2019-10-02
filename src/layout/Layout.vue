@@ -5,22 +5,26 @@
 <template>
   <el-container>
     <!-- 头部 -->
-    <el-header v-if="layoutConfig.head">
-      <layout-head/>
+    <el-header>
+      <slot  v-if="$slots.head" name="head"></slot>
+      <layout-head v-else />
     </el-header>
-    <el-container v-if="layoutConfig.aside">
+    <el-container>
       <!-- 侧边栏 -->
       <el-aside width="200px">
-        <layout-aside/>
+        <slot v-if="$slots.aside" name="aside"></slot>
+        <layout-aside v-else />
       </el-aside>
       <el-container>
         <!-- 内容部门 -->
-        <el-main v-if="layoutConfig.main">
-          <layout-main/>
+        <el-main >
+          <slot v-if="$slots.main" name="main"></slot>
+          <layout-main v-else />
         </el-main>
         <!-- 底部 -->
-        <el-footer v-if="layoutConfig.foot">
-          <layout-foot/>
+        <el-footer >
+          <slot v-if="$slots.foot" name="foot"></slot>
+          <layout-foot v-else />
         </el-footer>
       </el-container>
     </el-container>
@@ -29,21 +33,18 @@
 
 <script>
 export default {
-  props:{
-    layoutConfig:Object
-  },
   data() {
     return {};
   },
   methods: {
-    
+  },
+  mounted() {
   }
 };
 </script>
 
 <style>
 .el-header,
-
 .el-footer {
   background-color: #b3c0d1;
   color: #333;
